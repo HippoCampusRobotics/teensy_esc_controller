@@ -19,7 +19,7 @@ static constexpr uint32_t kTimeOutMs = 1000;
 
 static constexpr uint32_t kAdcPublishPeriodMs = 1000;
 static constexpr float kVref = 3.3;
-static constexpr float kVdivider = 10.0;
+static constexpr float kVdivider = 11.0;
 
 static constexpr int kLedPin = 13;
 static constexpr int kAdcPin = 14;
@@ -93,8 +93,8 @@ void serialEvent() {
 void setup() {
   delay(1000);
   Serial.begin(115200);
-  while (!Serial) {
-  };
+  // while (!Serial) {
+  // };
   pinMode(kLedPin, OUTPUT);
   pinMode(kAdcPin, INPUT_DISABLE);
   analogReadResolution(12);
